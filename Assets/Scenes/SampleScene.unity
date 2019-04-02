@@ -941,6 +941,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 5
   hMovement: 0
   vMovement: 0
@@ -960,7 +980,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.3, y: 3.43}
-  m_Size: {x: 5.95, y: 7.64}
+  m_Size: {x: 5, y: 7.64}
   m_Direction: 0
 --- !u!50 &466282517
 Rigidbody2D:
@@ -996,9 +1016,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  startTimeBtwAttack: 0.6
+  startTimeBtwAttack: 0.5
   attackPos: {fileID: 599587279}
-  attackRange: 0.7
+  attackRange: 0.85
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 256
