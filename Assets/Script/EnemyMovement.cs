@@ -6,11 +6,12 @@ public class EnemyMovement : MonoBehaviour
 {
     #region Variable init
     //public variable
-    
+    public float attackSpeed;
 
     //private variable
     private Transform target;
     private bool lookingRight; 
+    private float attackSpeedCounter;
     private int knockBackAmount = 20;
     private float speed = 1f;
     private int health;
@@ -27,11 +28,17 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         FaceTarget(target);
         RageCheck();
         CheckForDeath();
+        Move();
 
+    }
+
+    void Move(){
+        if(Vector2.Distance(target.position, transform.position) > 0.5){
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        }
     }
 
     // Make enemy face the player
@@ -80,6 +87,22 @@ public class EnemyMovement : MonoBehaviour
             speed = 3;
         }
     }
+
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.CompareTag("Player")){
+            Manager.PlayerTakeDamage(10);
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D other){
+        Debug.Log("Hit");
+        if(other.CompareTag("Player") && attackSpeedCounter < 0){
+            Manager.PlayerTakeDamage(10);
+            attackSpeedCounter = attackSpeed;
+        }else{
+            attackSpeedCounter-= Time.deltaTime;
+        }
+    }   
 
     private void CheckForDeath(){
         if(health <= 0){
