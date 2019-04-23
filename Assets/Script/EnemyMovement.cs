@@ -96,6 +96,8 @@ public class EnemyMovement : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other){
         Debug.Log("Hit");
+        //Manager.PlayerTakeDamage(10);
+
         if(other.CompareTag("Player") && attackSpeedCounter < 0){
             Manager.PlayerTakeDamage(10);
             attackSpeedCounter = attackSpeed;
