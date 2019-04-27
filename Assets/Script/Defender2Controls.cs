@@ -12,6 +12,7 @@ public class Defender2Controls : MonoBehaviour
     private float hMovement;
     private float vMovement;
     private bool attack;
+    private bool lookingRight;
     private Animator anim;     
 
     #endregion //end of variable init
@@ -21,6 +22,7 @@ public class Defender2Controls : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        lookingRight = true;
 
     }
 
@@ -30,6 +32,7 @@ public class Defender2Controls : MonoBehaviour
         if(Manager.defender == -1){
             MovePlayer();
         }
+        FaceMouse();
     }
 
     
@@ -53,6 +56,29 @@ public class Defender2Controls : MonoBehaviour
         }else{
             anim.SetBool("isWalking", true);
         }
+    }
+
+    void FaceMouse(){
+        //local variable init
+        float dist;
+        Vector3 myScale = transform.localScale;
+        Vector3 mousePos = Input.mousePosition;
+
+        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        //calculating distance between enemy and the player
+        dist = mousePos.x - transform.position.x;
+
+        /* Make enemy look at player
+        * If player is to the left of the enemy and enemy is looking to the right flip the x scale to face left
+        * If player is to the right of the enemy and enemy is looking to the left flip the x scale to face right
+        */
+        if((dist <= 0 && lookingRight) || (dist > 0 && !lookingRight)){
+            lookingRight = !lookingRight;
+            myScale.x *= -1;
+        }
+
+        //impliment the transformation
+        transform.localScale = myScale;
 
         #endregion //end of animation control
     }
