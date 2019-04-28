@@ -24,8 +24,9 @@ public class ProjectileScript : MonoBehaviour
     void Update()
     {
         
-        if(projStrength < 0){
+        if(projStrengthCounter < 0){
             destroyProj();
+            projStrengthCounter = projStrength;
         }else{
             projStrengthCounter-= Time.deltaTime;
         }
@@ -34,6 +35,10 @@ public class ProjectileScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Character1") || other.CompareTag("Character2")){
             Manager.PlayerTakeDamage(5);
+            destroyProj();
+        }
+
+        if(other.CompareTag("BlockDamage")){
             destroyProj();
         }
     }

@@ -6,7 +6,6 @@ public class Defender1Controls : MonoBehaviour
 {
     #region Variable init
     //public variable init
-    public float speed = 5.0f;
     public float startTimeBtwAttack;
     public Transform attackPos;
     public float attackRange;
@@ -15,10 +14,9 @@ public class Defender1Controls : MonoBehaviour
 
 
     //priavte variable init
-    private float hMovement;
-    private float vMovement;
     private bool attack;
     private float timeBtwAttack;
+    private GameObject parentObj;
     private bool lookingRight;
     private Animator anim;     
 
@@ -29,6 +27,7 @@ public class Defender1Controls : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        parentObj = gameObject.transform.parent.gameObject;
         lookingRight = true;
 
     }
@@ -37,7 +36,7 @@ public class Defender1Controls : MonoBehaviour
     void Update()
     {
         if(Manager.defender == 1){
-            MovePlayer();
+            AnimateDefender();
             CheckForAttack();
             FaceMouse();
         }
@@ -46,32 +45,16 @@ public class Defender1Controls : MonoBehaviour
     }
 
     //Player movement settings and animations
-    void MovePlayer(){
-        #region Movement Setting
-        hMovement = Input.GetAxisRaw("Horizontal"); 
-        vMovement = Input.GetAxisRaw("Vertical");
-        
+    void AnimateDefender(){
+        float hMovement = parentObj.GetComponent<Character1Controls>().GetHSpeed();
+        float vMovement = parentObj.GetComponent<Character1Controls>().GetVSpeed();
 
-
-        Vector2 position = transform.position;
-
-        position.x = position.x + speed * hMovement * Time.deltaTime;
-        position.y = position.y + speed * vMovement * Time.deltaTime;
-        transform.position = position;
-        #endregion // end of movement settings
-
-
-        #region  Movement Animation Control
         //movement animation
         if(hMovement == 0 && vMovement == 0){
             anim.SetBool("isWalking", false);
         }else{
             anim.SetBool("isWalking", true);
         }
-
-        
-
-        #endregion //end of animation control
     }
 
     //Checks to see if mouse button is pressed. If it is then attack

@@ -6,13 +6,11 @@ public class Defender2Controls : MonoBehaviour
 {
     #region Variable init
     //public variable init
-    public float speed = 5.0f;
 
     //priavte variable init
-    private float hMovement;
-    private float vMovement;
     private bool attack;
     private bool lookingRight;
+    private GameObject parentObj;
     private Animator anim;     
 
     #endregion //end of variable init
@@ -22,6 +20,7 @@ public class Defender2Controls : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        parentObj = gameObject.transform.parent.gameObject;
         lookingRight = true;
 
     }
@@ -30,26 +29,18 @@ public class Defender2Controls : MonoBehaviour
     void Update()
     {
         if(Manager.defender == -1){
-            MovePlayer();
+            AnimateDefender();
+            FaceMouse();
         }
-        FaceMouse();
+        
     }
 
     
-    void MovePlayer(){
-        hMovement = Input.GetAxisRaw("Horizontal"); 
-        vMovement = Input.GetAxisRaw("Vertical");
-        attack = Input.GetMouseButtonDown(0);
+    //Player movement settings and animations
+    void AnimateDefender(){
+        float hMovement = parentObj.GetComponent<Character2Controls>().GetHSpeed();
+        float vMovement = parentObj.GetComponent<Character2Controls>().GetVSpeed();
 
-
-        Vector2 position = transform.position;
-
-        position.x = position.x + speed * hMovement * Time.deltaTime;
-        position.y = position.y + speed * vMovement * Time.deltaTime;
-
-        transform.position = position;
-
-        #region Animation Control
         //movement animation
         if(hMovement == 0 && vMovement == 0){
             anim.SetBool("isWalking", false);
@@ -79,7 +70,5 @@ public class Defender2Controls : MonoBehaviour
 
         //impliment the transformation
         transform.localScale = myScale;
-
-        #endregion //end of animation control
     }
 }

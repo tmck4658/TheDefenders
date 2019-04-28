@@ -7,6 +7,9 @@ TagManager:
   - Enemies
   - Character1
   - Character2
+  - BlockDamage
+  - FlameWalker
+  - TheWalker
   layers:
   - Default
   - TransparentFX

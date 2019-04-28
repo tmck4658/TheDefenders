@@ -1,0 +1,309 @@
+fileFormatVersion: 2
+guid: 39d0600ee71407c40a14d42be2ff331e
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ArcherHead
+    21300002: ArcherLeftEye
+    21300004: ArcherRightEye
+    21300006: ArcherBody
+    21300008: ArcherLArm
+    21300010: ArcherWeapon
+    21300012: ArcherRArm
+    21300014: ArcherLLeg
+    21300016: ArcherRLeg
+    21300018: ArcherBone_9
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ArcherHead
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1351
+        width: 665
+        height: 650
+      alignment: 9
+      pivot: {x: 0.53551376, y: 0.056732085}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ca342403e64d845976f428d15d407f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcherLeftEye
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 1691
+        width: 43
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56f0ad0258200948b6790d7ca418ec0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcherRightEye
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 1690
+        width: 43
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f931d67cf971666489992803fb5985c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcherBody
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 863
+        width: 265
+        height: 331
+      alignment: 9
+      pivot: {x: 0.49999988, y: 0.15752178}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2c49d7137f1e741979c282225b8563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcherLArm
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 1091
+        width: 179
+        height: 50
+      alignment: 9
+      pivot: {x: 0.16892655, y: 0.59482175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aea531c8a5382c458c93134b35bc8c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcherWeapon
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 859
+        width: 235
+        height: 508
+      alignment: 9
+      pivot: {x: -0.14502369, y: 0.39725572}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ef9892f5c1d5542b19cd25154806d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcherRArm
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 945
+        width: 179
+        height: 48
+      alignment: 9
+      pivot: {x: 0.15568398, y: 0.40123114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b69764c782f12e45ac44bca290b0648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcherLLeg
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 524
+        width: 48
+        height: 164
+      alignment: 9
+      pivot: {x: 0.5, y: 0.84690076}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf16cbd8151d24e4d8c18b16abfa905b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcherRLeg
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 534
+        width: 46
+        height: 163
+      alignment: 9
+      pivot: {x: 0.39693683, y: 0.8344865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81149ac233e1a594c80cad2fe9d69f9b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcherBone_9
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 154
+        width: 275
+        height: 378
+      alignment: 9
+      pivot: {x: 0.5322936, y: 0.7819285}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdee93e5274f07b488aa3758d87037df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 21fca85df33576c4c8c1c368ec525df8
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
