@@ -1,7 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Manager : MonoBehaviour
 {
@@ -14,10 +15,14 @@ public class Manager : MonoBehaviour
     public static float inviTime = 2.0f;
     public static float inviTimer;
     public static bool playerInvincable;
+    public static int level;
 
     //public variable
+    public TextMeshProUGUI levelText;
     
     //private variable init
+    [SerializeField]
+    private GameObject gameOverUI;
     
     
     #endregion // end of the variable init
@@ -25,6 +30,7 @@ public class Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        level = 1;
         defender = 1;
         playerHealth = 100;
         playerInvincable = false;
@@ -35,8 +41,12 @@ public class Manager : MonoBehaviour
     void Update()
     {
         healthBar.value = playerHealth;
+        levelText.text = "Level: " + level;
         ChangeDefenderControl();
 
+        if(playerHealth <= 0){
+            EndGame();
+        }
         /*if(playerInvincable){
             inviTimer -= Time.deltaTime;
             if(inviTimer < 0){
@@ -49,6 +59,10 @@ public class Manager : MonoBehaviour
         if (Input.GetKeyDown("space")){
             defender *= -1;
         }
+    }
+
+    void EndGame(){
+        gameOverUI.SetActive(true);
     }
 
     public static void PlayerTakeDamage(int amount){
