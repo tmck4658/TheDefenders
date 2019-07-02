@@ -29,6 +29,9 @@ public class BlueFlame : MonoBehaviour
         }else if(other.CompareTag("TheWalker")){
             other.gameObject.GetComponent<EnemyMovement>().TakeDamage(damage);
             DestroyProjectile();
+        }else if(other.CompareTag("FreezeWalker")){
+            other.gameObject.GetComponent<EnemyMovement>().TakeDamage(damage/4);
+            DestroyProjectile();
         }else if(other.CompareTag("Character1")){
             return;
         }else{

@@ -55,12 +55,14 @@ public class Manager : MonoBehaviour
         }*/
     }
 
+    //change the controle between the player's charaters
     void ChangeDefenderControl(){
         if (Input.GetKeyDown("space")){
             defender *= -1;
         }
     }
 
+    //show the end game screen
     void EndGame(){
         gameOverUI.SetActive(true);
     }
@@ -75,6 +77,4 @@ public class Manager : MonoBehaviour
         CameraAnim.SetTrigger("shake");
         playerHealth -= amount;
     }
-
-
 }

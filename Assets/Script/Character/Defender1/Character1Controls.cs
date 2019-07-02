@@ -6,6 +6,7 @@ public class Character1Controls : MonoBehaviour
 {
     //public variable
     public float speed = 5.0f;
+    public int frostTolerence = 2;
     public GameObject defender1, defender2;
 
     //private variable
@@ -67,6 +68,16 @@ public class Character1Controls : MonoBehaviour
                 defender2.gameObject.SetActive(false);
                 break;
         }
+    }
+
+    //make player imobile if frozen
+    public void Chilled(float amount){
+
+    }
+
+    //slow down the character
+    public void Slowdown(float time){
+        speed -= 2;
     }
 
     public float GetHSpeed(){

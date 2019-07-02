@@ -10,6 +10,8 @@ TagManager:
   - BlockDamage
   - FlameWalker
   - TheWalker
+  - Defender1
+  - FreezeWalker
   layers:
   - Default
   - TransparentFX
